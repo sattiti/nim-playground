@@ -78,7 +78,7 @@ proc sum2(x:var int, y:var int):int =
 
 # a, b will be changed by sum2
 var a, b = 2
-echo "\nPointer 引数:"
+echo "\nPointer Args:"
 echo sum2(a, b)
 echo "a: ", a # 3
 echo "b: ", b # 3
@@ -113,4 +113,8 @@ proc calc2(x: varargs[int]):int =
 
 echo calc2(1, 2, 3) # 7 戻り値は result の中身。
 echo calc2(-1, -2)  # 1 return によって戻される。
+# }}}
+# No name proc{{{
+echo "\nNo Name proc:"
+echo (proc(x:int):bool = return x > 0)(1)
 # }}}
